@@ -1,0 +1,22 @@
+This program takes two command line argument.
+First argument is the input file for trace.
+Second argument is the ouput file for effectiveness of various cache subsystem organizations.
+
+This program consists of following cache subsystem organizations:
+1. Direct-Mapped Cache (64-bytes cache line)
+   -  with 5 different cache size (4KB, 8KB, 16KB, 32KB, and 64KB)
+2. Set-Associative Cache (64KB cache with 64-bytes cache line)
+   -  with 4 different associativity (2, 4, 8, and 16)
+   -  all of them use least recently used (LRU) replacement policy
+3. Fully-Associative Cache (64KB cache with 64-bytes cache line)
+   -  with 2 different replacement policy (LRU and Random)
+4. Set-Associative Cache with no Allocation on a Write Miss (64KB cache with 64-bytes cache line)
+   -  with 4 different associativity (2, 4, 8, and 16)
+   -  all of them use least recently used (LRU) replacement policy
+   
+Output file is formatted accordingly:
+# # # # #	// 1.
+# # # #		// 2.
+#			// fully with LRU
+#			// fully with random
+# # # #		// 4.
